@@ -1,6 +1,8 @@
 // intro to array
 // reference type
 
+// order collection of item
+
 var i;  
 var emp = new Array();  
 emp[0] = "Arun";  
