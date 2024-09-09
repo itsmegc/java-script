@@ -26,7 +26,7 @@ console.log(`value of array 1 is ${array1}`); // value of array 1 is item1,item2
 console.log(`value of array 2 is ${array2}`); // value of array 2 is item1,item2,item3
 
 
-//Example
+//Example 1
 
 let dailyActivities = [ "eat", "work", "sleep"];
 
@@ -42,3 +42,84 @@ var emp=["Sonoo","Vimal","Ratan"];
 for (i=0;i<emp.length;i++){  
 console.log(emp[i] + "<br/>");  
 }  
+
+//Example 2
+
+let arr = [{
+    id: 1,
+    name: 'John'
+},
+{
+    id: 2,
+    name: 'Jane'
+},
+{
+    id: 3,
+    name: 'Bob'
+},
+{
+    id: 4,
+    name: 'Alice'
+}
+];
+
+arr = arr.filter(item => item.id !== 2);
+
+console.log(arr);
+
+//Example 3
+
+let arr = [{
+    id: 1,
+    name: 'John'
+},
+{
+    id: 2,
+    name: 'Jane'
+},
+{
+    id: 3,
+    name: 'Bob'
+},
+{
+    id: 4,
+    name: 'Alice'
+}
+];
+
+arr.forEach((item, index) => {
+    if (item.id === 2) {
+        arr.splice(index, 1);
+    }
+});
+
+console.log(arr);
+
+
+//Example 3
+
+let arr3 = [{
+    id: 1,
+    name: 'John'
+},
+{
+    id: 2,
+    name: 'Jane'
+},
+{
+    id: 3,
+    name: 'Bob'
+},
+{
+    id: 4,
+    name: 'Alice'
+}
+];
+
+arr3.forEach((item, index) => {
+    if (item.id === 2) {
+        arr3.splice(index, 1);
+    }
+});
+
+console.log(arr3);
