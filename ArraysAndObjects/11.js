@@ -104,7 +104,7 @@ let arr3 = [{
 },
 {
     id: 2,
-    name: 'Jane'
+    name: 'Jane'0
 },
 {
     id: 3,
@@ -123,3 +123,55 @@ arr3.forEach((item, index) => {
 });
 
 console.log(arr3);
+
+// Example 4
+
+const Teachers = [
+    {
+        name: 'saritha',
+        subject: 'Maths'
+    },
+    {
+        name: 'ahim',
+        subject: 'science'
+    },
+    {
+        name: 'sneha',
+        subject: 'Social'
+    }]
+
+Teachers.forEach(teacher => {
+    for (let value in teacher) {
+        console.log(`${teacher[value]}`)
+    }
+})
+
+// Example 5
+
+const arr5 = [{ x:1 }, { x: 2 }, { x: 3 }];
+
+arr5.forEach((element, index, array) => {
+    console.log(element.x);    
+});
+
+// Example 6
+
+const Teachers6= [
+    {
+        name: 'saritha',
+        subject: 'Maths'
+    },
+    {
+        name: 'ahim',
+        subject: 'science'
+    },
+    {
+        name: 'sneha',
+        subject: 'Social'
+    }]
+
+for (let teacher in Object.keys(Teachers6)) {
+    for (let key in Teachers6[teacher]) {
+        console.log(Teachers6[teacher][key]);
+    }
+}
