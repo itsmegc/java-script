@@ -1,8 +1,17 @@
 // basic function
 
-function singHappyBirthday() {
+// function declaration
+
+// function singHappyBirthday() {
+//     console.log("happy birthday to you.....");
+//   }
+
+//   singHappyBirthday()
+ 
+// function expression
+const singHappyBirthday = function () {
   console.log("happy birthday to you.....");
-}
+};
 
 singHappyBirthday();
 
