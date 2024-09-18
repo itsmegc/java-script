@@ -20,11 +20,10 @@ if (true) {
 }
 // console.log(number); // Uncaught ReferenceError: number is not defined
 
-
 // default parameter
 
-function addTwoNumber(a=1,b=2){
-    return a+b
+function addTwoNumber(a = 1, b = 2) {
+  return a + b;
 }
 
-console.log(`sum of two number is ${addTwoNumber()}`)
+console.log(`sum of two number is ${addTwoNumber()}`);
