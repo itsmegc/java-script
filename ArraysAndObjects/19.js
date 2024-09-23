@@ -26,3 +26,25 @@ const [{name:firstName}, , {id}] = users;
 
 console.log(firstName);
 console.log(id);
+
+// example
+
+const Teachers = [
+  {
+      name: 'saritha',
+      subject: 'Maths'
+  },
+  {
+      name: 'ahim',
+      subject: 'science'
+  },
+  {
+      name: 'sneha',
+      subject: 'Social'
+  }]
+
+Teachers.forEach(teacher => {
+  for (let value in teacher) {
+      console.log(`${teacher[value]}`)
+  }
+})
