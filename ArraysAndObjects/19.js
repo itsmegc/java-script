@@ -67,3 +67,6 @@ console.log(sum);  // 15
 for (let i = 0; i < numbers.length; i++) {
   console.log(numbers[i]);  // Outputs each number
 }
+
+
+
