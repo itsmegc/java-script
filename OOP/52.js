@@ -21,6 +21,7 @@ function createUser(firstName, lastName, email, age, address) {
   };
 }
 
+
 const users = [
   createUser("Sam", "Singh", "sam.singh@yy.com", 17, "Akshya Nagar 1st Block 1st Cross, Rammurthy Nagar, Bangalore-560016"),
   createUser("John", "Doe", "john.doe@xy.com", 28, "MG Road 2nd Block, Indiranagar, Bangalore-560038"),

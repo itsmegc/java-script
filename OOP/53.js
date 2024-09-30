@@ -7,4 +7,5 @@ const obj2 = {
   key3: "value2",
 };
 
+
 console.log(obj2);
