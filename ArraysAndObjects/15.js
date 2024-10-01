@@ -81,3 +81,65 @@ Teachers.forEach(teacher => {
       console.log(`${teacher[value]}`)
   }
 })
+
+// Examples
+// Example 1: Using for...in loop to access object properties
+const car = {
+  make: "Toyota",
+  model: "Corolla",
+  year: 2020,
+  "fuel type": "Hybrid",
+};
+
+console.log("Using for...in loop:");
+for (let property in car) {
+  console.log(`${property}: ${car[property]}`);
+}
+
+// Example 2: Using Object.keys() to get all property names and loop through them
+const laptop = {
+  brand: "Dell",
+  model: "XPS 13",
+  price: 1200,
+};
+
+console.log("\nUsing Object.keys() with forEach:");
+Object.keys(laptop).forEach((key) => {
+  console.log(`${key}: ${laptop[key]}`);
+});
+
+// Example 3: Using Object.entries() to get key-value pairs and loop through them
+const smartphone = {
+  brand: "Apple",
+  model: "iPhone 12",
+  price: 999,
+};
+
+console.log("\nUsing Object.entries():");
+for (let [key, value] of Object.entries(smartphone)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Example 4: Using Object.values() to access all values in an object
+const book = {
+  title: "1984",
+  author: "George Orwell",
+  pages: 328,
+};
+
+console.log("\nUsing Object.values():");
+Object.values(book).forEach((value) => {
+  console.log(value);
+});
+
+// Example 5: Using for...of with Object.keys() to loop over keys and access corresponding values
+const movie = {
+  title: "Inception",
+  director: "Christopher Nolan",
+  releaseYear: 2010,
+};
+
+console.log("\nUsing for...of with Object.keys():");
+for (let key of Object.keys(movie)) {
+  console.log(`${key}: ${movie[key]}`);
+}
