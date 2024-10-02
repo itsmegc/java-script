@@ -143,3 +143,4 @@ console.log("\nUsing for...of with Object.keys():");
 for (let key of Object.keys(movie)) {
   console.log(`${key}: ${movie[key]}`);
 }
+
