@@ -13,7 +13,7 @@ const obj1 = {
 const obj2 = Object.create(obj1)
 obj2.key3 = "value3";
 
-console.log(obj2.key1);
+console.log(obj2.__proto__);
 
 // proto_vs_prototype.js
 
