@@ -1,27 +1,28 @@
-const useMethod = {
-  about: function () {
-    return `${this.firstName + " " + this.lastName} age is ${
-      this.age
-    } email id is ${this.email} and address is ${this.address}`;
-  },
-  is18: function () {
-    return this.age >= 18;
-  },
-  sing: function () {
-    return "Kitni dafa";
-  },
-};
+// const useMethod = {
+//   about: function () {
+//     return `${this.firstName + " " + this.lastName} age is ${
+//       this.age
+//     } email id is ${this.email} and address is ${this.address}`;
+//   },
+//   is18: function () {
+//     return this.age >= 18;
+//   },
+//   sing: function () {
+//     return "Kitni dafa";
+//   },
+// };
 
 function createUsers(firstName, lastName, email, age, address) {
-  const user = Object.create(useMethod);
+  // const user = Object.create(useMethod);
+  const user = Object.create(createUsers.prototype);
   user.firstName = firstName;
   user.lastName = lastName;
   user.email = email;
   user.age = age;
   user.address = address;
-  user.about = useMethod.about;
-  user.is18 = useMethod.is18;
-  user.sing = useMethod.sing;
+  // user.about = useMethod.about;
+  // user.is18 = useMethod.is18;
+  // user.sing = useMethod.sing;
   return user;
 }
 
@@ -49,5 +50,24 @@ const user3 = createUsers(
   "Jayanagar 3rd Block, JP Nagar, Bangalore-560041"
 );
 
+
+
+// console.log(createUsers.prototype)
+
+createUsers.prototype.about = function () {
+  return `${this.firstName + " " + this.lastName} age is ${
+    this.age
+  } email id is ${this.email} and address is ${this.address}`;
+};
+
+createUsers.prototype.is18 = function () {
+  return this.age >= 18;
+};
+
+createUsers.prototype.sing = function () {
+  return "Kitni dafa";
+};
+
+
 console.log(user1);
-console.log(user1.about());
+console.log(user1.sing());
