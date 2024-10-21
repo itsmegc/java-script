@@ -1,15 +1,37 @@
-// Compilation: JS code is parsed and checked for errors before execution, but it isn't fully compiled like other languages.
+// Example 1: Global Execution Context
+console.log(this);            // Logs the global object (window in browsers)
+console.log(window);          // Logs the global 'window' object in the browser
 
-// Code Execution: After compilation, the JS engine executes the code line by line (interpreted).
+var firstName = "Gaurav";     // Global variable declared using var
+console.log(firstName);       // Logs "Gaurav" from the global scope
 
-// Why Compilation?: To catch syntax errors early and optimize code before execution.
+// Example 2: Code Compilation and Execution
+var firstName = "Gaurav";     // Variable creation in the compilation phase
+console.log(firstName);       // Logs "Gaurav" during the execution phase
 
-// How JavaScript Code Executes: Code runs in two phases—creation (memory allocation) and execution (line-by-line).
+// Example 3: Local Execution Context
+function greet() {
+    var greeting = "Hello";    // Local variable
+    console.log(greeting);     // Logs "Hello"
+}
 
-// Global Execution Context: The default context where JS code runs; created when the script starts (includes global variables, functions).
+greet();                       // Calls the function and creates a local execution context
 
-// Local Execution Context: Created inside functions; has its own scope and variables local to the function.
+// Example 4: Closure
+function outerFunction() {
+    var outerVar = "I'm outside!";
+    
+    function innerFunction() {
+        console.log(outerVar);  // Inner function can access outerVar due to closure
+    }
+    
+    return innerFunction;
+}
 
-// Closure: A function that remembers and accesses variables from its outer scope, even after the outer function has returned.
+var myClosure = outerFunction(); // outerFunction returns innerFunction
+myClosure();                     // Logs "I'm outside!"
 
-
+// Example 5: Why Compilation?
+var num1 = 10;
+var num2 = 20;
+console.log(num1 + num2);      // JS engine catches any errors during compilation phase before running this line
