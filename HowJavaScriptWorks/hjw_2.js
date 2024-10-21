@@ -12,9 +12,9 @@
 
 // Closure: A function that remembers and accesses variables from its outer scope, even after the outer function has returned.
 
+console.log(this);
+console.log(window);
+console.log(firstName);
 
-console.log(this)
-console.log(window)
-console.log(firstName)
-
-var firstName="Gaurav"
+var firstName = "Gaurav";
+console.log(firstName);
