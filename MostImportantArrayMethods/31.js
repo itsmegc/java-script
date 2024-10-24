@@ -45,3 +45,43 @@ const userTotalPrice = userCart.reduce(
 );
 
 console.log(userTotalPrice);
+
+
+const numbers1 = [5, 9, 12, 7, 3, 25, 4];
+
+const maxNumber = numbers1.reduce((max, currentValue) => {
+  return currentValue > max ? currentValue : max;
+}, numbers[0]); // Initial value is the first element
+
+console.log(maxNumber); // Output: 25
+
+const strings = ["JavaScript", "is", "a", "powerful", "language"];
+
+const concatenatedString = strings.reduce((sentence, word) => sentence + " " + word);
+
+console.log(concatenatedString); // Output: "JavaScript is a powerful language"
+
+const fruits = ["apple", "banana", "orange", "apple", "banana", "apple"];
+
+const fruitCount = fruits.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+
+console.log(fruitCount); 
+// Output: { apple: 3, banana: 2, orange: 1 }
+
+const nestedArray = [[1, 2], [3, 4], [5, 6]];
+
+const flatArray = nestedArray.reduce((acc, currentValue) => acc.concat(currentValue), []);
+
+console.log(flatArray); // Output: [1, 2, 3, 4, 5, 6]
+
+const words = ["reduce", "method", "is", "very", "useful"];
+
+const totalLength = words.reduce((total, word) => total + word.length, 0);
+
+console.log(totalLength); // Output: 25
+
+
+
