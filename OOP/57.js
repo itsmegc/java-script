@@ -31,7 +31,6 @@ const user3 = new CreateUsers(
   "Jayanagar 3rd Block, JP Nagar, Bangalore-560041"
 );
 
-// Additional user examples
 const user4 = new CreateUsers(
   "Alice",
   "Johnson",
@@ -64,6 +63,47 @@ const user7 = new CreateUsers(
   "HSR Layout 3rd Sector, Bangalore-560102"
 );
 
+// Additional user examples
+const user8 = new CreateUsers(
+  "Sophia",
+  "Taylor",
+  "sophia.taylor@ef.com",
+  26,
+  "Malleshwaram 5th Cross, Bangalore-560003"
+);
+
+const user9 = new CreateUsers(
+  "Liam",
+  "Anderson",
+  "liam.anderson@gh.com",
+  34,
+  "BTM Layout 2nd Stage, Bangalore-560076"
+);
+
+const user10 = new CreateUsers(
+  "Olivia",
+  "Clark",
+  "olivia.clark@hi.com",
+  29,
+  "Hebbal 1st Main Road, Bangalore-560024"
+);
+
+const user11 = new CreateUsers(
+  "James",
+  "Lewis",
+  "james.lewis@ij.com",
+  31,
+  "Banashankari 2nd Stage, Bangalore-560070"
+);
+
+const user12 = new CreateUsers(
+  "Isabella",
+  "Martin",
+  "isabella.martin@kl.com",
+  23,
+  "Yelahanka New Town, Bangalore-560064"
+);
+
 // Prototype methods
 CreateUsers.prototype.about = function () {
   return `${this.firstName + " " + this.lastName} age is ${this.age} email id is ${this.email} and address is ${this.address}`;
@@ -78,7 +118,7 @@ CreateUsers.prototype.sing = function () {
 };
 
 // Example usage
-const users = [user1, user2, user3, user4, user5, user6, user7];
+const users = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10, user11, user12];
 
 // Log user details and check if they are 18 or older
 users.forEach((user) => {
