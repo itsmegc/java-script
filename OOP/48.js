@@ -91,3 +91,65 @@ const createUser = (name, age) => ({
 
 const user4 = createUser("Gaurav", 25);
 console.log(user4); // Output: { name: 'Gaurav', age: 25, isAdult: true }
+
+
+// Example 6: Arrow Function Inside Array Method (Lexical `this`)
+
+const user6 = {
+  name: "Gaurav",
+  scores: [50, 60, 70],
+  calculateTotal: function () {
+    let total = 0;
+    this.scores.forEach(score => {
+      total += score;
+    });
+    console.log(this); // `this` refers to `user6` object
+    console.log("Total Score:", total); // Output: Total Score: 180
+  },
+};
+
+user6.calculateTotal();
+
+// Example 7: Regular Function Inside Array Method (Non-Lexical `this`)
+
+const user7 = {
+  name: "Gaurav",
+  scores: [50, 60, 70],
+  calculateTotal: function () {
+    let total = 0;
+    this.scores.forEach(function (score) {
+      total += score;
+      console.log(this); // `this` does not refer to `user7` here, but the global scope
+    });
+    console.log("Total Score:", total); // Output may vary based on `this`
+  },
+};
+
+user7.calculateTotal();
+
+// Example 8: Arrow Function with Default Parameters
+
+const greet = (name = "Guest") => {
+  console.log(`Hello, ${name}!`);
+};
+
+greet("Gaurav"); // Output: Hello, Gaurav!
+greet(); // Output: Hello, Guest!
+
+// Example 9: Arrow Function to Shorten Code with Implicit Return
+
+const square = num => num * num;
+
+console.log(square(5)); // Output: 25
+
+// Example 10: Arrow Function as a Callback in Event Listener
+
+const input = document.createElement("input");
+input.placeholder = "Type something";
+
+input.addEventListener("input", (event) => {
+  console.log(this); // `this` refers to global object or undefined in strict mode
+  console.log("Input value:", event.target.value); // Output: Value of the input field
+});
+
+document.body.appendChild(input);
