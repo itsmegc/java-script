@@ -102,3 +102,89 @@ function outerFunction() {
 }
 
 outerFunction();
+
+
+// Example 1: Lexical Scope with Closures
+const outerConst = "Outer Constant";
+
+function closureExample() {
+  const innerConst = "Inner Constant";
+
+  return function innerFunction() {
+    console.log("Inside innerFunction:", outerConst); // Accessible
+    console.log("Inside innerFunction:", innerConst);  // Accessible
+  };
+}
+
+const innerFunc = closureExample();
+innerFunc(); // Executes innerFunction
+
+// Example 2: Lexical Scope with Function Expressions
+const scopeVar = "Scope Variable";
+
+const functionExpressionExample = function() {
+  const exprVar = "Expression Variable";
+
+  const nestedFunction = function() {
+    console.log("Inside nestedFunction:", scopeVar); // Accessible
+    console.log("Inside nestedFunction:", exprVar);  // Accessible
+  };
+
+  nestedFunction();
+};
+
+functionExpressionExample();
+
+// Example 3: Lexical Scope with Arrow Functions
+const arrowScope = "Arrow Scope";
+
+const arrowFunctionExample = () => {
+  const innerArrowVar = "Inner Arrow Variable";
+
+  const nestedArrowFunction = () => {
+    console.log("Inside nestedArrowFunction:", arrowScope); // Accessible
+    console.log("Inside nestedArrowFunction:", innerArrowVar); // Accessible
+  };
+
+  nestedArrowFunction();
+};
+
+arrowFunctionExample();
+
+// Example 4: Lexical Scope with Multiple Levels
+const globalLevel = "Global Level";
+
+function levelOne() {
+  const levelOneVar = "Level One Variable";
+
+  function levelTwo() {
+    const levelTwoVar = "Level Two Variable";
+    console.log("Inside levelTwo:", globalLevel);       // Accessible
+    console.log("Inside levelTwo:", levelOneVar);      // Accessible
+    console.log("Inside levelTwo:", levelTwoVar);      // Accessible
+  }
+
+  levelTwo();
+}
+
+levelOne();
+
+// Example 5: Lexical Scope with Nested Functions
+function parentFunction() {
+  const parentVar = "Parent Variable";
+
+  function childFunction() {
+    const childVar = "Child Variable";
+
+    function grandChildFunction() {
+      console.log("Inside grandChildFunction:", parentVar); // Accessible
+      console.log("Inside grandChildFunction:", childVar);  // Accessible
+    }
+
+    grandChildFunction();
+  }
+
+  childFunction();
+}
+
+parentFunction();
