@@ -69,3 +69,64 @@ function displayDetails() {
 }
 
 displayDetails();
+
+
+// lexical environment, scope chain
+
+const brand = "Tesla";
+
+function showCarModel() {
+  const model = "Model S";
+  console.log(model);
+  console.log(brand);
+}
+
+showCarModel();
+
+// lexical environment, scope chain
+
+const genre = "Science Fiction";
+
+const describeBook = function () {
+  const bookTitle = "Dune";
+  console.log(bookTitle);
+  console.log(genre);
+};
+
+describeBook();
+
+// lexical environment, scope chain
+
+const university = "MIT";
+
+function showDepartment() {
+  const department = "Computer Science";
+  console.log(department);
+  console.log(university);
+}
+
+showDepartment();
+
+// lexical environment, scope chain
+
+const operatingSystem = "Linux";
+
+const displayEditor = function () {
+  const editor = "VS Code";
+  console.log(editor);
+  console.log(operatingSystem);
+};
+
+displayEditor();
+
+// lexical environment, scope chain
+
+const continent = "Africa";
+
+function showCountry() {
+  const country = "Nigeria";
+  console.log(country);
+  console.log(continent);
+}
+
+showCountry();
