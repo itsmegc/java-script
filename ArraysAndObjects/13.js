@@ -50,3 +50,38 @@ const [task1, task2, ...otherTasks] = tasks;
 console.log(`Task 1: ${task1}`); // Task1
 console.log(`Task 2: ${task2}`); // Task2
 console.log(`Other tasks: ${otherTasks}`); // ["Task3", "Task4", "Task5"]
+
+// Example 6: Destructuring Array of Cities
+const cities = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
+const [city1, city2, ...otherCities] = cities;
+console.log(`City 1: ${city1}`); // New York
+console.log(`City 2: ${city2}`); // Los Angeles
+console.log(`Other cities: ${otherCities}`); // ["Chicago", "Houston", "Phoenix"]
+
+// Example 7: Destructuring Array of Courses
+const courses = ["Math", "Science", "History", "Art", "Physical Education"];
+const [course1, course2, ...remainingCourses] = courses;
+console.log(`Course 1: ${course1}`); // Math
+console.log(`Course 2: ${course2}`); // Science
+console.log(`Remaining courses: ${remainingCourses}`); // ["History", "Art", "Physical Education"]
+
+// Example 8: Destructuring Array of Languages
+const languages = ["English", "Spanish", "French", "German", "Japanese"];
+const [lang1, lang2, ...otherLanguages] = languages;
+console.log(`Language 1: ${lang1}`); // English
+console.log(`Language 2: ${lang2}`); // Spanish
+console.log(`Other languages: ${otherLanguages}`); // ["French", "German", "Japanese"]
+
+// Example 9: Destructuring Array of Animals
+const animals = ["Lion", "Tiger", "Elephant", "Giraffe", "Zebra"];
+const [animal1, animal2, ...remainingAnimals] = animals;
+console.log(`Animal 1: ${animal1}`); // Lion
+console.log(`Animal 2: ${animal2}`); // Tiger
+console.log(`Remaining animals: ${remainingAnimals}`); // ["Elephant", "Giraffe", "Zebra"]
+
+// Example 10: Destructuring Array of Devices
+const devices = ["Laptop", "Tablet", "Smartphone", "Smartwatch", "Camera"];
+const [device1, device2, ...otherDevices] = devices;
+console.log(`Device 1: ${device1}`); // Laptop
+console.log(`Device 2: ${device2}`); // Tablet
+console.log(`Other devices: ${otherDevices}`); // ["Smartphone", "Smartwatch", "Camera"]
