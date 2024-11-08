@@ -71,3 +71,46 @@ cars.push("BMW");
 for (i = 0; i < cars.length; i++) {  
   document.write(cars[i] + "<br>");  
 }  
+
+// Example 7: Array of Strings with Predefined Elements
+var colors = ["Red", "Green", "Blue", "Yellow"];  
+  
+for (i = 0; i < colors.length; i++) {  
+  document.write(colors[i] + "<br>");  
+}  
+
+// Example 8: Array of Floating Point Numbers
+var temperatures = [32.5, 45.3, 28.9, 37.6];  
+  
+for (i = 0; i < temperatures.length; i++) {  
+  document.write("Temperature: " + temperatures[i] + "°C<br>");  
+}  
+
+// Example 9: Array of Functions
+var functionsArray = [
+  function() { return "Hello"; },
+  function() { return "World"; },
+  function() { return "!"; }
+];
+  
+for (i = 0; i < functionsArray.length; i++) {  
+  document.write(functionsArray[i]() + " ");  
+}  
+
+// Example 10: Array with Initial Values and Length Property
+var animals = ["Dog", "Cat", "Elephant"];
+document.write("Total animals: " + animals.length + "<br>");
+  
+for (i = 0; i < animals.length; i++) {  
+  document.write(animals[i] + "<br>");  
+}  
+
+// Example 11: Array with Loop to Add Items
+var squares = [];
+for (i = 1; i <= 5; i++) {  
+  squares.push(i * i);  
+}
+  
+for (i = 0; i < squares.length; i++) {  
+  document.write("Square of " + (i + 1) + " is: " + squares[i] + "<br>");  
+}  
