@@ -186,3 +186,48 @@ const promise = new Promise((resolve, reject) => {
 promise
   .then(result => console.log(result))  // Output: Operation was successful!
   .catch(error => console.error(error)); // If it fails, this will execute
+
+  // ** Example 11: Using Spread Operator to Merge Objects **
+
+const user1 = { name: "Alice", age: 25 };
+const user2 = { name: "Bob", location: "New York" };
+
+const mergedUser = { ...user1, ...user2 }; // Merging objects with spread operator
+console.log(mergedUser); // Output: { name: "Bob", age: 25, location: "New York" }
+
+// ** Example 12: Rest Parameters in Function Arguments **
+
+function sumAll(...numbers) { // Rest parameter to capture all arguments
+  return numbers.reduce((sum, num) => sum + num, 0);
+}
+
+console.log(sumAll(1, 2, 3, 4)); // Output: 10
+console.log(sumAll(5, 10, 15));  // Output: 30
+
+// ** Example 13: Optional Chaining in Object Access **
+
+const userProfile = {
+  name: "John",
+  address: { city: "San Francisco", zip: "94101" }
+};
+
+console.log(userProfile.address?.city);  // Output: San Francisco
+console.log(userProfile.contact?.phone); // Output: undefined (without error)
+
+// ** Example 14: Logical OR and AND Assignment Operators **
+
+let message = "";
+message ||= "Default message"; // Assigns if falsy
+console.log(message); // Output: "Default message"
+
+let user10 = { name: "Alice", age: 25 };
+user10.age &&= 30; // Updates age only if it exists
+console.log(user10.age); // Output: 30
+
+// ** Example 15: Nullish Coalescing Operator (??)**
+
+let username10 = null;
+let defaultName = "Guest";
+
+let displayName = username10 ?? defaultName; // Assigns default if null or undefined
+console.log(displayName); // Output: Guest
