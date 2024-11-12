@@ -72,9 +72,52 @@ const user = {
   };
   
   // Renaming properties during destructuring
-  const { firstName: fName, lastName: lName, age } = person;
+  const { firstName: fName, lastName: lName, age1 } = person;
   
   console.log(fName);  // Output: John
   console.log(lName);  // Output: Doe
-  console.log(age);    // Output: 30
+  console.log(age1);    // Output: 30
   
+  const calculateArea = ({ length, width }) => {
+    return length * width;
+  };
+  
+  const rectangle = { length: 10, width: 5 };
+  
+  console.log(calculateArea(rectangle));  // Output: 50
+
+  const greetUser = ({ name, greeting = "Hello" }) => {
+    return `${greeting}, ${name}!`;
+  };
+  
+  const user1 = { name: "Alice" };
+  
+  console.log(greetUser(user1));  // Output: Hello, Alice!
+  
+  const coordinates = [[1, 2], [3, 4], [5, 6]];
+
+// Destructuring nested arrays
+const [[x1, y1], [x2, y2], [x3, y3]] = coordinates;
+
+console.log(x1, y1);  // Output: 1 2
+console.log(x2, y2);  // Output: 3 4
+console.log(x3, y3);  // Output: 5 6
+
+const car = {
+  model: "Mustang",
+  year: 1969,
+};
+
+// Using default values and renaming
+const { model: carModel, color = "red" } = car;
+
+console.log(carModel);  // Output: Mustang
+console.log(color);     // Output: red (default value)
+
+const fruits = ["apple", "banana", "cherry", "date"];
+
+// Skipping the first and third elements
+const [, secondFruit, , fourthFruit] = fruits;
+
+console.log(secondFruit);  // Output: banana
+console.log(fourthFruit);  // Output: date
