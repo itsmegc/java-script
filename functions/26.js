@@ -73,3 +73,58 @@ function showMessage(message) {
 }
 
 logMessage(showMessage);
+
+function authenticateUser(callback) {
+  console.log("Authenticating user...");
+  callback({ username: "johndoe", status: "authenticated" });
+}
+
+function handleAuthentication(result) {
+  console.log("User status:", result);
+}
+
+authenticateUser(handleAuthentication);
+
+function sendNotification(callback) {
+  console.log("Sending notification...");
+  callback("You have a new message!");
+}
+
+function displayNotification(message) {
+  console.log("Notification:", message);
+}
+
+sendNotification(displayNotification);
+
+function downloadFile(callback) {
+  console.log("Downloading file...");
+  callback("file.txt");
+}
+
+function onDownloadComplete(fileName) {
+  console.log("Download complete:", fileName);
+}
+
+downloadFile(onDownloadComplete);
+
+function fetchDataFromAPI(callback) {
+  console.log("Fetching data from API...");
+  callback({ userId: 101, name: "John Smith" });
+}
+
+function processAPIData(data) {
+  console.log("API Data processed:", data);
+}
+
+fetchDataFromAPI(processAPIData);
+
+function getWeather(callback) {
+  console.log("Getting weather update...");
+  callback("Sunny, 25°C");
+}
+
+function displayWeather(update) {
+  console.log("Weather update:", update);
+}
+
+getWeather(displayWeather);
